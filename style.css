@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "poppins",sans-serif;
+}
+:root{
+    --bg-color:white;
+    --second-bg-color:white;
+    --text-color:black;
+    --main-color:rgb(217, 137, 235);
+    --third-bg-color:white;
+}
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+}
+body{
+
+    color: var(--text-color);
+}
+header{
+    height: 1rem;
+    width: 100%;
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:5.5rem;
+    position: sticky;
+    z-index: 1;
+
+}
+.navigation{
+    padding-top: 1px;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 5.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--text-color);
+    position: fixed;
+}
+.wish{
+    padding-left: 10px;
+}
+.navcontainer{
+
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    
+
+}
+
+section{
+    min-height: 33.75rem;
+}
+.home{
+    background-image: url(baloons.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+
+}
+.icon{
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding-right: 1rem;
+
+}
+.icon a{
+    border: 1px solid transparent;
+    
+    color: var(--text-color);
+    font-size: 2rem;
+    padding: 2rem 2rem;
+    margin-top: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1px;
+
+}
+.icon a:hover{
+    
+    border:1px solid transparent;
+    border-bottom: 3px solid var(--main-color);
+
+}
+.container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 20px;
+
+
+    height: 850px;
+    width: 95%;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid var(--text-color);
+   
+
+    
+}
+
+.info{
+    animation: forwards 1s moveup linear;
+    transform: translateY(-45px);
+    opacity: 0;
+    
+}
+@keyframes moveup{
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.info h1{
+    margin-left: 5rem;
+    color: white;
+    font-size: 5rem;
+    text-shadow: 0 0 25px var(--text-color);
+}
+.info h3{
+    margin-left: 5rem;
+    color: var(--main-color);
+    text-shadow: 0 0 25px var(--text-color);
+    font-size:1.6rem;
+}
+.photos
+{   margin-left: 30rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    animation:  linear forwards moveright 0.5s;
+    transform: translateX(100px);
+   transition: 0.5s ease-in-out;
+
+}
+@keyframes moveright{
+    100%{
+        transform: translateX(0px);
+    }
+
+}
+.photos img{
+    border: 10px;
+    border-color: black;
+    width: 10vw;
+    filter: blur(30px);
+    transition: 0.5s ease-in-out;
+    
+}
+.photos img:hover{
+    transition: 0.5 ease-in-out;
+    transform: scale(2);
+    box-shadow: 0 0 25px var(--main-color);
+    filter: blur(0px);
+    z-index: 1;
+
+    
+}
+.about1{
+    width: 100%;
+}
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 9rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    background-image: url(baloons.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container h2{
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--second-bg-color);
+    text-shadow: 0 0 25px var(--text-color);
+}
+.container h4{
+    font-size: 3rem;
+    max-width: 90%;
+    padding-top: 2rem;
+}
+@media(max-width:1326px){
+    html{
+        font-size: 0.5rem;
+
+    }
+    .wish{
+        display: flex;
+        width: 50rem;
+    }
+    .container{
+        width: 90%;
+        height: 93dvh;
+    }
+    .photos{
+        margin: 20rem;
+    }
+    .container h2{
+        font-size: 4rem;
+        font-weight: 600;
+    }
+    .container h4{
+        font-size: 2rem;
+    }
+    .navigation{
+        width: 90%;
+    }
+
+}
+@media (max-width:590px){
+    html{
+        font-size: 0.5rem;
+    }
+    .wish{
+        display: flex;
+        width: 30rem;
+    }
+    .container{
+        width: 90%;
+        height: 93dvh;;
+        
+    }
+    .photos{
+        margin: 10rem;
+    }
+    .container h2{
+        font-size: 4rem;
+        font-weight: 600;
+    }
+    .container h4{
+        font-size: 1.5rem;}
+    .navigation{
+        width: 90%;
+    }
+}
+@media(max-width:488px){
+    .body{
+        background-size: contain;
+    }
+    .navigation{
+        width: 90%;
+    }
+    .photos{
+        margin: 0rem;
+    }
+    .container h2{
+        font-size: 3rem;
+        font-weight: 600;
+        padding-bottom: 2rem;
+    }
+    .container h4{
+        font-size: 1.5rem;
+    }
+
+}
